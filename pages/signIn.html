@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Fontawesome Integrity -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <!-- Ended -->
+    <!-- Tailwind Integrity -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ended -->
+    <!-- fONT -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
+    <!-- Ended -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="signInPage">
+    <div class="flex justify-between p-10 gap-10">
+        <!-- Left side instructions -->
+        <div class="leftSide w-[50%]">
+            <div class="flex flex-col justify-center items-center mx-[4rem]">
+                <h2 class="RobotoFont tracking-wider text-[35px] font-medium">Proceed to Account</h2>
+                <p>Welcome Back, We are happy to see you back.</p>
+            </div>
+            <div class="flex items-center justify-center mt-8">
+                <form class="flex flex-col w-90 ">
+                    <label for="emailForm" class="text-[#a6a6a6] mb-3">Email</label>
+                    <input type="email" class=" py-3 px-4 rounded-full bg-[#f3f3f3] mb-5" id="emailForm">
+                    <label for="passwordForm" class="text-[#a6a6a6] mb-3">Password</label>
+                    <input type="password" class=" py-3 px-4 rounded-full bg-[#f3f3f3] mb-5" id="passwordForm">
+                    <button class="bg-[#FFD85F] rounded-full py-3 px-4 tracking-wide font-medium RobotoFont mt-2" id="submitBtn" type="button">Submit</button>
+                </form>
+            </div>
+            <div class="logos flex justify-center w-[100%] gap-2">
+                <span class="border border-[#808080] rounded-full py-3 px-4 w-43 cursor-pointer text-center flex justify-center items-center gap-3 mt-5"><i class="fa-brands fa-apple"></i>Apple</span>
+                <span class="border border-[#808080] rounded-full py-3 px-4 w-43 cursor-pointer text-center flex justify-center items-center gap-3 mt-5"><i class="fa-brands fa-google"></i>Google</span>
+            </div> 
+            <div class="flex justify-center mt-7">
+                <div class="w-90 h-[1px] bg-[#c7c7c7]"></div>
+            </div>
+            <div class="flex justify-center items-center w-[100%] mt-4">
+                <div class="text-[12.5px] RobotoFont flex justify-between w-[60%]">
+                    <span class="no-underline text-[#909090] tracking-wide">No account yet? <a href="signUp.html" class="underline text-black font-medium"> Sign up</a></span>
+                    <a href="#" class="underline tracking-wide">Terms & Conditions</a>
+                </div>
+            </div>
+        </div> 
+
+        <!-- RIght SIde Image -->
+
+        <div class="hidden md:block rightSide w-[50%]">
+            <img src="/assets/workers.jpg" alt="workers" class="w-full h-full object-cover rounded-xl">
+        </div>
+
+    </div>
+
+    <script type="module" src="signIn.js"></script>
+</body>
+</html>

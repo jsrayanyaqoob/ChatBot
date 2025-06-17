@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <!-- Fontawesome Integrity -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <!-- Ended -->
+    <!-- Tailwind Integrity -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Ended -->
+    <!-- fONT -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
+    <!-- Ended -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black">
+    <nav class="flex items-center justify-between px-8 py-3">
+        <div class="chatContainer flex items-center gap-[2.1rem]">
+            <h1 class="chatHead text-white text-[30px] Arial font-semibold font-mono">Chattrix</h1>
+            <i class="fa-solid fa-book-bookmark ficon text-[#707070] text-[16px]"></i>
+        </div>
+
+        <div class="flex items-center gap-[1.4rem]">
+            <i class="fa-solid fa-magnifying-glass ficon text-[#707070] text-[15px]"></i>
+            <!-- <button class="logInBtn text-white bg-[#1e1e1e] px-[22px] py-[9.5px] rounded-full font-medium text-[14px]"><a href="pages/signIn.html">Log in</a></button> -->
+             <a href="pages/signIn.html"><button class="logInBtn text-white bg-[#1e1e1e] px-[22px] py-[9.5px] rounded-full font-medium text-[14px]">Log in</button></a>
+        </div>
+    </nav>
+
+    <div class="flex flex-col gap-2 my-5 py-5"> 
+        <p class="text-white text-[14.5px] font-medium text-center mt-5 sans-serif">December 15, 2025&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="text-[#707070] transition hover:text-[#fff] duration-300 ease-in cursor-pointer"> Product</span></p>
+        <h1 class="text-white text-[4rem] font-medium text-center">Introducing Chattrix</h1>
+        <div class="flex items-center justify-center gap-8 mt-4">
+            <!-- <button class="chattriXTried cursur-pointer bg-white rounded-full py-[9px] px-[25px] text-[17px] font-medium hover:bg-[#707070] transition duration-500 ease-in"><a href="pages/chat.html">Try Chattrix</a><i class="fa-solid fa-chevron-right text-[12.5px] ml-1"></i></button> -->
+            <a href="pages/chat.html"><button class="chattriXTried cursur-pointer bg-white rounded-full py-[9px] px-[25px] text-[17px] font-medium hover:bg-[#707070] transition duration-500 ease-in">Try Chattrix<i class="fa-solid fa-chevron-right text-[12.5px] ml-1"></i></button></a>
+            <button class="text-white font-medium cursur-pointer hover:text-[#707070] transition duration-500 ease-in]">Learn about Chattrix <i class="fa-solid fa-chevron-right text-[12.5px]"></i></button>
+        </div>
+    </div> 
+
+    <div class="flex justify-center mt-8 pt-8 flex-col items-center">
+        <p class="bg-[#1F1F1F] w-150 h-[1.5px]"></p>
+
+        <div class="flex items-center w-150 justify-between px-1 mt-3">    
+            <div class="text-white text-center text-[22px] flex gap-3">
+                <i class="fa-brands fa-twitter text-[#1C96E8] cursor-pointer"></i>
+                <i class="fa-brands fa-instagram text-[#FA0873] cursor-pointer"></i>
+                <i class="fa-brands fa-facebook  text-[#107BEB] cursor-pointer"></i>
+                <i class="fa-brands fa-telegram text-[#30ACEB] cursor-pointer"></i>
+            </div>
+
+            <div class="text-white cursor-pointer hover:text-[#707070] transition duration-300 ease-in-out]">
+                <span class="text-sm font-medium"><i class="fa-solid fa-link"></i>&nbsp; Share</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body Section where all the text will be written -->
+
+    <div class="mt-3">
+        <div class="flex justify-center mr-4 mt-5 pt-5">
+            <p class="introductionLine text-white w-145 text-[17px] tracking-wide" style="word-spacing: 0.5px;">Chattrix is a smart and responsive chatbot designed to deliver quick, accurate, and helpful information. It’s easy to use, fast in response, and ideal for learning, exploring ideas, or solving everyday problems. With its clean interface and intelligent replies, Chattrix is your reliable digital assistant. Whether you're curious or need guidance, Chattrix is here to help.</p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="samplesHead text-white text-[40px] font-semibold my-5 pt-5">Samples</h1>
+            <div class="userDiv bg-[#1F1F1F] w-150 rounded-lg p-5 px-4 mb-2 mt-5 relative right-1">
+                <span class="font-bold text-[#A5A5A5] text-[14px]">User</span>
+                <p class="question text-white text-[15px]">Explain how photosynthesis works? Give me all the detailing about it for my assignment.</p>
+            </div>
+            <div class="chatGPT bg-[#0E161A] w-150 rounded-lg p-5 px-4 my-2 relative right-1">
+                <span class="font-bold text-[#A5A5A5] text-[14px]">Chattrix</span>
+
+                <p class="answer text-white text-[15px] leading-normal flex gap-2 flex-col">
+                    <span>Photosynthesis is the process by which green plants, algae, and some bacteria make their own food using sunlight. It takes place mainly in the leaves, inside cells that contain a green pigment called chlorophyll.</span>
+
+                    <span>During photosynthesis, plants take in carbon dioxide (CO₂) from the air and water (H₂O) from the soil. Using sunlight as energy, they convert these into glucose] and release oxygen (O₂) as a byproduct.</span>
+
+                <span>The basic equation looks like this:</span>
+                Carbon dioxide + Water + Sunlight → Glucose + Oxygen  <br/>
+
+                So, photosynthesis not only feeds the plant but also gives us the oxygen we breathe!</p>
+            </div>
+        </div>
+    </div>
+    
+        <div class="flex flex-col items-center justify-center">
+            <div class="userDiv bg-[#1F1F1F] w-150 rounded-lg p-5 px-4 mb-2 mt-5 relative right-1">
+                <span class="font-bold text-[#A5A5A5] text-[14px]">User</span>
+                <p class="question text-white text-[15px] mb-4">This code is not working. What is wrong in this code - how do i fix it?</p>
+                <span class="mainCodeContainer text-white font-mono leading-relaxed mt-3 pt-3">
+                    <p class="bg-[#313131] w-120 p-5 rounded-lg text-[15px]">function greetUser(name) { <br/>
+                        if (name = "Rayan") {<br/>
+                            console.log("Hello, Rayan!");<br/>
+                        } else {<br/>
+                            console.log("Hello, guest!");<br/>
+                        }}<br/>
+
+                        greetUser("Rayan");</p>
+                </span>
+            </div>
+            <div class="chatGPT bg-[#0E161A] w-150 rounded-lg p-5 px-4 mt-2 relative right-1">
+                <span class="font-bold text-[#A5A5A5] text-[14px]">Chattrix</span>
+
+                <p class="answer text-white text-[15px] leading-normal flex gap-2 flex-col mb-4">
+                    Sure! Here’s how I would explain what happens when you run your code exactly as written: <br/> <br/>
+                    In your code: <br/></p>
+                <span class="mainCodeContainer text-white font-mono leading-relaxed mt-3 pt-3">
+                    <p class="bg-[#313131] w-120 p-5 rounded-lg text-[15px]">function greetUser(name) { <br/>
+                        if (name === "Rayan") {<br/>
+                            console.log("Hello, Rayan!");<br/>
+                        } else {<br/>
+                            console.log("Hello, guest!");<br/>
+                        }}<br/>
+
+                        greetUser("Rayan");</p>
+                </span>
+                <p class="text-white text-[17px] font-bold answer mt-4 ml-1">What actually happens:
+                    <span>
+                        <ul class="text-white ml-5 mt-4 flex flex-col gap-4 list-disc">
+                            <li>Inside the if condition, instead of checking if name equals "Rayan", the code assigns "Rayan" to the variable name because you used a single = (assignment operator).</li>  
+                            
+                            <li>The assignment expression name = "Rayan" returns "Rayan", which is truthy, so the if condition always passes.</li>
+
+                            <li>The assignment expression name = "Rayan" returns "Rayan", which is truthy, so the if condition always passes.</li>
+                        </ul>
+                    </span> <hr style="width: 98%; height: 1.5px; margin: 30px auto; border-radius: 5px; border: none; background-color: #2C2C2C !important;" />
+
+                    <span class="text-white answer ml-2 text-[14px]">How to fix it: Use === (strict equality) to compare instead of assigning:</span>
+
+                     <span class="mainCodeContainer text-white font-mono leading-relaxed mt-3 pt-3 relative left-1">
+                        <p class="bg-[#313131] w-120 p-5 rounded-lg text-[15px] mt-3">
+                           if (name === "Rayan") { <br/>
+                                <span class="ml-7">// ...</span> <br/>
+                           }
+                    </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="methodsSection">
+            <h1 class="samplesHead text-white text-[40px] text-center font-semibold mt-8 mb-5 pt-5 w-205">Methods</h1>
+            <div class="points flex flex-col justify-center items-center text-white answer gap-5">
+                <p class="w-150">
+                    To start using Chattrix, simply type your question or message into the input box and press enter. The chatbot will read your prompt and respond within seconds using natural, conversational language. No sign-up or login is needed—just ask and get instant help.
+                </p>
+                <p class="w-150">
+                    You can use Chattrix for a variety of tasks like explaining concepts, summarizing topics, solving problems, or even generating ideas. Whether it's related to studies, coding, creative writing, or general knowledge, Chattrix adapts to your needs quickly and clearly.
+                </p>
+                <p class="w-150">
+                    For best results, try to be specific and clear in your queries. Instead of saying "history," ask "Give a summary of World War II." This helps Chattrix understand your intent better and provide more accurate, helpful responses.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="samplesHead text-white text-[40px] text-center font-semibold mt-8 mb-5 pt-5 w-217">Limitations</h1>
+            <div class="mb-10">
+                <ul class="text-white ml-5 mt-4 flex flex-col gap-4 list-disc flex flex-col justify-center items-center">
+                    <li class="w-150">Chattrix is strictly designed to avoid generating any form of inappropriate, violent, hateful, or sexually explicit content. It follows content safety guidelines to ensure all conversations remain respectful and suitable for all age groups. Even if prompted, the chatbot will not engage in topics that go against its safety protocols. This ensures a clean and secure user experience every time</li>
+                    <li class="w-150">Although Chattrix can provide general knowledge on health, law, or finance, it cannot and should not be used as a source for professional advice. It lacks real-time verification and cannot replace certified experts. For critical decisions or personal issues, always consult a qualified professional. The chatbot is not responsible for any actions taken based on its suggestions in these areas.</li>
+                    <li class="w-150">Chattrix does not collect, store, or remember any personal data from your interactions. Each session is treated independently, meaning no history or personal information is saved. This design is intentional to respect user privacy and prevent misuse of personal information. You can chat freely without worrying about your data being tracked</li>
+                    <li class="w-150">While Chattrix aims to be highly accurate and helpful, it may occasionally provide outdated or incorrect information. It relies on pre-trained data and doesn’t have live internet access unless connected to a real-time data source. Users are encouraged to double-check important facts or data before relying on them completely. The bot is a helpful guide, not an ultimate authority.</li>
+                    <li class="w-150">Chattrix performs best when given clear and specific instructions. Vague or overly complex prompts may lead to confused or less relevant answers. It may also struggle with abstract requests or mixed-language inputs. To get the most accurate response, users should communicate with focused and well-structured questions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mb-10">
+            <div class="text-white flex justify-between items-center mt-20 mb-8">
+                <h1 class="text-[24px] font-medium answer mx-[8.6rem]">Related articles</h1>
+                <h2 class="text-[16px] answer mx-[8.7rem]">View all product articles</h2>
+            </div>
+           <div class="flex justify-center gap-10 w-full rounded-xl relative">
+
+            <!-- First Section -->
+
+                <div>
+                    <div class="w-[100%] h-[19rem] rounded-xl overflow-hidden cursor-pointer">
+                        <img
+                        src="./assets/firstImg.png"
+                        alt="Design 1"
+                        class="object-cover w-full h-full transform transition-transform duration-500 ease-in-out hover:scale-105"
+                        />
+                    </div>
+                    <div class="mt-3 flex text-white flex-col cursor-pointer">
+                        <span class="text-white text-[17px] font-semibold">Global news partnerships: Le <br/> Monde and Prisa Media</span>
+                        <p class="answer text-[13.5px] mt-3">Company &nbsp;&nbsp;&nbsp;<span class="text-[#707070] font-semibold">Aug 15, 2023</span></p>
+                    </div>
+                </div>
+
+                <!-- Second Section -->
+
+                <div>
+                    <div class="w-[100%] h-[19rem] rounded-xl overflow-hidden cursor-pointer">
+                        <img
+                        src="./assets/secondImg.png"
+                        alt="Design 2"
+                        class="object-cover w-full h-full transform transition-transform duration-500 ease-in-out hover:scale-105"
+                        />
+                    </div>
+                    <div class="mt-3 flex text-white flex-col cursor-pointer">
+                        <span class="text-white text-[17px] font-semibold">Very Beautiful Design, made by <br/> Rayan by the one and only best leading <br/> chatbox "Chattrix"</span>
+                        <p class="answer text-[13.5px] mt-3">Company &nbsp;&nbsp;&nbsp;<span class="text-[#707070] font-semibold">Jul 11, 2021</span></p>
+                    </div>
+                </div>
+                
+                <!-- Third Section -->
+
+                <div>
+                    <div class="w-[100%] h-[19rem] rounded-xl overflow-hidden cursor-pointer">
+                        <img
+                        src="./assets/thirdImg.png"
+                        alt="Design 3"
+                        class="object-cover w-full h-full transform transition-transform duration-500 ease-in-out hover:scale-105"
+                        />
+                    </div>
+                    <div class="mt-3 flex text-white flex-col cursor-pointer">
+                        <span class="text-white text-[17px] font-semibold">Rayan announces new features <br/> of the best Chatbot</span>
+                        <p class="answer text-[13.5px] mt-3">Company &nbsp;&nbsp;&nbsp;<span class="text-[#707070] font-semibold">Dec 15, 2025</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- its the footer -->
+
+        <footer>
+            
+        </footer>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
