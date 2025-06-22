@@ -21,23 +21,21 @@ newChat.addEventListener('click', () => {
       overlay.classList.add("hidden");
     }
   });
+})
 
-  confirmed.addEventListener("click", (e) => {
-    if (e.target === confirmed) {
-      overlay.classList.add("hidden");
+
+confirmed.addEventListener('click', function() {
+    var chatTitle = document.getElementById('chatHeadVal').value
+
+    if (chatTitle) {
+        // this will create a new chat 
+        var newChat = document.createElement('div');
+        newChat.className = 'cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px] flex items-center gap-2'
+        newChat.innerHTML = `<i class="fa-regular fa-message"></i><span class="text-sm">${chatTitle}</span>`
+
+        container.appendChild(newChat);
+
+        document.getElementById('chatHeadVal').value = '';
+        document.getElementById('modalOverlay').classList.add('hidden');
     }
-  });
-
-  
-})
-
-confirmed.addEventListener('click', () => {
-      container.innerHTML = `
-        <div>
-            <a href="#" class="flex gap-2 items-center text-[14px] cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px]">
-            ${headingChat.value}</a>
-        </div>
-    `
-})
-
-
+});
