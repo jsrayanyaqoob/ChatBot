@@ -38,7 +38,7 @@
             </div>
 
             <div class="text-white flex flex-col pt-2 mt-2"> 
-                <div class="cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px]">
+                <div class="cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px]" id="openNewChat">
                     <a href="#" class="flex gap-2 items-center"><i class="fa-solid fa-pen-to-square"></i><span class="text-sm">New chats</span></a>
                 </div>   
                 <div class="flex gap-2 items-center cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px]">
@@ -60,9 +60,38 @@
 
             <div class="mt-5 pt-3 mx-3">
                 <p class="text-[#AAAAAA] text-[14px]">Chats</p>
-                <div></div>
+                <div class="text-white flex flex-col pt-4 mt-4" id="mainChatsContainer"></div>
             </div>
         </div>
+
+        <!-- MODAL OPTION FOR OPENING NEW CHATS -->
+
+        <!-- Modal Overlay -->
+        <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <!-- Modal Box -->
+        <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-md relative">
+                <!-- Close Button -->
+                <button id="closeModalBtn" class="absolute top-3 right-3 text-gray-400 hover:text-black text-xl">&times;</button>
+                
+                <!-- Modal Content -->
+                <h2 class="text-2xl font-semibold mb-4">Chat</h2>
+                <p class="mb-4 text-gray-700">Enter a title for your new conversation.</p>
+                <div class="flex items-center bg-gradient-to-br from-purple-100 to-blue-100 pt-3 my-4">
+                    <input 
+                    type="text" 
+                    placeholder="Enter your title..." 
+                    class="w-90 py-3 pl-5 pr-12 text-gray-700 bg-white border border-gray-300 rounded-full shadow-md outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition duration-300"
+                    id="chatHeadVal"
+                    />
+                </div>
+                                
+                <button class="mt-2 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition" id="confirmation">
+                Confirm
+                </button>
+            </div>
+        </div>
+
+        <!-- MODAL OPTION ENDED  -->
 
 
         <!-- Right Side -->
