@@ -27,13 +27,30 @@
 <body class="bg-[#212121]">
     <div class="flex items-center justify-between px-5 mt-2">
         <div class="text-white text-xl cursor-pointer hover:bg-[#3A3A3A] rounded p-1 px-2">
-            <h1>Chattrix <i class="fa-solid fa-chevron-down text-sm text-[#747474] ml-1"></i></h1>
+            <h1 class="RobotoFont">Chattrix <i class="fa-solid fa-chevron-down text-sm text-[#747474] ml-1 "></i></h1>
         </div>
-        <div class="hover:bg-[#3A3A3A] p-2">
-            <img src="/assets/guestUser.png" alt="GUEST IMAGE" width="20px" class="border rounded-full bg-white p-[6px]">
+        <div class="flex items-center gap-5">
+            <div class="flex">
+                <div class="mx-3">
+                    <button class="bg-white text-black px-3 rounded-full font-medium py-1">Log in</button>
+                </div> 
+                <div>
+                    <button class="border border-[#424242] px-3 py-1 rounded-full text-white font-medium">Sign up for free</button>
+                </div>
+            </div>
+            <!-- <img src="/assets/guestUser.png" alt="GUEST IMAGE" width="20px" class="border rounded-full bg-white"> -->
+             <div class="hover:bg-[#3A3A3A] p-2 rounded-full">
+                 <img src="/assets/guestUser.png" alt="GUEST IMAGE" class="w-7 h-7 object-cover border rounded-full bg-white p-1">
+            </div>
         </div>
     </div>
 
+    <div class="h-[80vh] flex justify-center items-center flex-col gap-4">
+        <div class="text-white text-[28px]">What can I help with?</div>
+        <div class="w-[100%] flex justify-center">
+            <input type="text" placeholder="Ask anything" class="bg-[#303030] placeholder-[#A6A6A6] rounded-xl px-5 w-170 pt-4 pb-14 focus:outline-none focus:ring-0 text-white">
+        </div>
+    </div>
 
     <script src="freeChat.js"></script>
 </body>
