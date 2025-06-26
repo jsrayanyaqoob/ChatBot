@@ -17,9 +17,9 @@ inputVal.addEventListener("keydown", async (e) => {
 
     const data = await res.json()
     const result = data?.candidates?.[0]?.content?.parts?.[0]?.text
-    userMessages.push(userInput)
-    botMessages.push(result)
-    console.log(userMessages)
-    console.log(botMessages)
+    const userChat = userMessages.push(userInput)
+    const botChat = botMessages.push(result)
+
+    inputVal.value = ""
   }
 })
