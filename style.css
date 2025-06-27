@@ -63,3 +63,15 @@
 .SansFont{
     font-family: "Ancizar Sans", sans-serif;
 }
+
+
+/* for style the head */
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
