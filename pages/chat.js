@@ -2,7 +2,7 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/fi
 
 
 const container = document.querySelector("#mainChatsContainer");
-const newChat = document.querySelector("#openNewChat");
+const newChat = document.getElementById("openNewChat");
 const closeBtn = document.querySelector("#closeModalBtn");
 const overlay = document.querySelector("#modalOverlay");
 const headingChat = document.querySelector("#chatHeadVal")
@@ -35,7 +35,7 @@ const data = confirmed.addEventListener('click', function() {
     if (chatTitle) {
         var newChat = document.createElement('div');
         newChat.className = 'cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px] flex items-center gap-2'
-        newChat.innerHTML = `<i class="fa-regular fa-message"></i><span class="text-sm">${chatTitle}</span>`
+        newChat.innerHTML = `<i class="fa-regular fa-message"></i><span class="text-sm">${chatTitle || "Untitled Chat"}</span>`
 
         container.appendChild(newChat);
 
