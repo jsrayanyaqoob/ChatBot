@@ -19,5 +19,4 @@ submit.addEventListener('click', event => {
             const errorMessage = error.message;
             console.log(errorMessage)
         });
-
 })
