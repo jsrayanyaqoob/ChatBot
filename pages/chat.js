@@ -46,11 +46,27 @@ const data = confirmed.addEventListener('click', function() {
 });
 
 
-onAuthStateChanged(auth, (user) => {
+async function getInfoFromFirestore(){
+
+  let user;
+  const q = query(collection(db, "cities"), where("uid", "==", auth.currentUser.uid));
+
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    console.log(doc.data());
+    user = doc.data()
+  });
+}
+
+
+onAuthStateChanged(auth, async (user) => {
   if (user) {
-    const uid = user.uid;
+    const uid = user.uid; 
+    console.log(uid)
+    const users = await getInfoFromFirestore()
+    console.log(users);
+    
   } else {
-    // User is signed out
-    // ...
+    window.location = "login.html"
   }
 });
