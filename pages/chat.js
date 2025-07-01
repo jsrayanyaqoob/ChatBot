@@ -30,20 +30,21 @@ newChat.addEventListener('click', () => {
 })
 
 
-const data = confirmed.addEventListener('click', function() {
-    var chatTitle = document.getElementById('chatHeadVal').value
+// const data = confirmed.addEventListener('click', function() {
+//     var chatTitle = document.geztElementById('chatHeadVal').value
 
-    if (chatTitle) {
-        var newChat = document.createElement('div');
-        newChat.className = 'cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px] flex items-center gap-2'
-        newChat.innerHTML = `<i class="fa-regular fa-message"></i><span class="text-sm">${chatTitle || "Untitled Chat"}</span>`
+//     if (chatTitle) {
+//         var newChat = document.createElement('div');
+//         newChat.className = 'cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px] flex items-center gap-2'
+//         newChat.innerHTML = `<i class="fa-regular fa-message"></i><span class="text-sm">${chatTitle || "Untitled Chat"}</span>`
 
-        container.appendChild(newChat);
+//         container.appendChild(newChat);
 
-        document.getElementById('chatHeadVal').value = '';
-        document.getElementById('modalOverlay').classList.add('hidden');
-    }
-});
+//         document.getElementById('chatHeadVal').value = '';
+//         document.getElementById('modalOverlay').classList.add('hidden');
+//     }
+// });
+
 
 
 async function getInfoFromFirestore(){
@@ -61,14 +62,29 @@ async function getInfoFromFirestore(){
 }
 
 
+async function loadChats(userUid) {
+  const chatsRef = collection(db, "users", userUid, "chats");
+  const snapshot = await getDocs(chatsRef);
+
+  snapshot.forEach((doc) => {
+    const data = doc.data();
+    const chatTitle = data.title;
+
+    const chatDiv = document.createElement("div");
+    chatDiv.className = 'cursor-pointer hover:bg-[#3A3A3A] rounded-xl px-3 py-[8px] flex items-center gap-2';
+    chatDiv.innerHTML = `<i class="fa-regular fa-message"></i><span class="text-sm">${chatTitle}</span>`;
+    container.appendChild(chatDiv);
+  });
+}
+
+
+
 onAuthStateChanged(auth, async (user) => {
   if (user) {
-    const uid = user.uid; 
-    console.log(uid)
-    const users = await getInfoFromFirestore()
-    // console.log(users);
-    
+    const uid = user.uid;
+    await loadChats(uid);
   } else {
-    window.location = "login.html"
+    window.location = "login.html";
   }
 });
+
