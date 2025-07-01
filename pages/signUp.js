@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js"; 
-import { auth, db } from "./firebaseconfig.js";
+import { auth, db } from "./firebaseconfig.js"
 
 const email = document.querySelector("#email");
 const fullName = document.querySelector("#full");
@@ -30,4 +30,6 @@ submit.addEventListener("click", async (event) => {
       console.log("Signup error:", error.message);
       alert(error.message); 
     })    
+
+
 })
