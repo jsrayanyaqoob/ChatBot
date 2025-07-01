@@ -1,6 +1,3 @@
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js"; 
-
-
 const container = document.querySelector("#mainChatsContainer");
 const newChat = document.getElementById("openNewChat");
 const closeBtn = document.querySelector("#closeModalBtn");
