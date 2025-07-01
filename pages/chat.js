@@ -54,7 +54,7 @@ async function getInfoFromFirestore(){
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     console.log(doc.data());
-    user = doc.data()
+    return user = doc.data()
   });
 }
 
