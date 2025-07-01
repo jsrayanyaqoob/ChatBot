@@ -88,3 +88,92 @@ onAuthStateChanged(auth, async (user) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const chatWindow = document.getElementById("chatWindow");
+const chatInput = document.getElementById("chatInput");
+const sendBtn = document.getElementById("sendBtn");
+
+function addMessage(sender, text) {
+  const wrapper = document.createElement("div");
+  wrapper.className = `flex items-start gap-3 ${
+    sender === "user" ? "justify-end" : "justify-start"
+  }`;
+
+  const avatar = document.createElement("img");
+  avatar.src = sender === "user" ? "/assets/guest.png" : "/assets/logo.png";
+  avatar.className = "w-8 h-8 rounded-full";
+
+  const bubble = document.createElement("div");
+  bubble.className = `p-3 max-w-[70%] rounded-2xl text-sm leading-relaxed shadow-md ${
+    sender === "user"
+      ? "bg-purple-600 text-white rounded-br-none"
+      : "bg-[#2c2c2c] text-white rounded-bl-none"
+  }`;
+  bubble.innerText = text;
+
+  if (sender === "user") {
+    wrapper.appendChild(bubble);
+    wrapper.appendChild(avatar);
+  } else {
+    wrapper.appendChild(avatar);
+    wrapper.appendChild(bubble);
+  }
+
+  chatWindow.appendChild(wrapper);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+async function sendMessage() {
+  const message = chatInput.value.trim();
+  if (!message) return;
+
+  addMessage("user", message);
+  chatInput.value = "";
+
+  try {
+    const res = await fetch("http://localhost:3000/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt: message })
+    });
+
+    const data = await res.json();
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "⚠️ No response from AI";
+    addMessage("bot", reply);
+  } catch (err) {
+    console.error(err);
+    addMessage("bot", "❌ Error talking to AI.");
+  }
+}
+
+sendBtn.addEventListener("click", sendMessage);
+
+// Press Enter to send
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    sendMessage();
+  }
+});
