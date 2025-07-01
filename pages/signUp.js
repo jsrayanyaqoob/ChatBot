@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js"; 
 import { auth, db } from "./firebaseconfig.js"
 

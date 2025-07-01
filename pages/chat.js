@@ -40,3 +40,13 @@ const data = confirmed.addEventListener('click', function() {
         document.getElementById('modalOverlay').classList.add('hidden');
     }
 });
+
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+  } else {
+    // User is signed out
+    // ...
+  }
+});
