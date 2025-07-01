@@ -17,7 +17,7 @@ submit.addEventListener("click", async (event) => {
       try {
         const docRef = await addDoc(collection(db, "users"), {
           fullName: fullName.value,
-          userUid: user.uid,
+          userUid: user.uid
         });
         
         console.log("Document written with ID: ", docRef.id);
