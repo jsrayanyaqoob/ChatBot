@@ -49,7 +49,7 @@ const data = confirmed.addEventListener('click', function() {
 async function getInfoFromFirestore(){
 
   let user;
-  const q = query(collection(db, "cities"), where("uid", "==", auth.currentUser.uid));
+  const q = query(collection(db, "users"), where("uid", "==", auth.currentUser.uid));
 
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
