@@ -54,8 +54,10 @@ async function getInfoFromFirestore(){
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
     console.log(doc.data());
-    return user = doc.data()
+    user = doc.data()
   });
+
+  return user;
 }
 
 
@@ -64,7 +66,7 @@ onAuthStateChanged(auth, async (user) => {
     const uid = user.uid; 
     console.log(uid)
     const users = await getInfoFromFirestore()
-    console.log(users);
+    // console.log(users);
     
   } else {
     window.location = "login.html"
